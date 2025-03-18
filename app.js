@@ -7,7 +7,7 @@ function agregarAmigo() {
 
     //si el input está vacío
     if(nombreUsuario === "") {
-        return alert("Ingrese un nombre valido por favor.");
+        return displayedResult("Ingrese un nombre valido por favor.");
     } else {
         //de lo contrario se añade el nombre al final del array
         amigos.push(nombreUsuario);
@@ -24,20 +24,28 @@ function agregarAmigo() {
 //función para visualizar la lista en la pantalla
 function displayedList() {
     //Seleccion y limpieza de la lista existente
-    let displayedList = document.getElementById("listaAmigos");
-    displayedList.innerHTML = "";
+    let friendsList = document.getElementById("listaAmigos");
+    friendsList.innerHTML = "";
     //iteración sobre el arreglo para agregar nombres en cada iteración 
     for (let index = 0; index < amigos.length; index++) {
-        displayedList.innerHTML += `<li class="item-list"> ${amigos[index]} </li>`;
+        friendsList.innerHTML += `<li class="item-list"> ${amigos[index]} </li>`;
     }
     return; 
 }
 
 function randomName() {
-    if (amigos != []) {
+    //si el arreglo tiene al menos 2 elementos
+    if (amigos.length >= 2) {
         let randomIndex = Math.floor(Math.random()*amigos.length);
-        console.log(randomIndex);
+        let sortedName = amigos[randomIndex];
+        displayedResult(sortedName);
     } else {
-        return alert("Ingrese almenos dos nombres a la lista para el sorteo.");
+        return displayedResult("Ingrese al menos dos nombres a la lista para el sorteo.");
     }
+}
+
+//función para exponer mensajes en la sección de resultado
+function displayedResult(textResult) {
+    resultBox = document.getElementById("resultado");
+    resultBox.innerHTML = textResult;
 }
