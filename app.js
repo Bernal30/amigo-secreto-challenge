@@ -16,7 +16,9 @@ function agregarAmigo() {
     document.getElementById("amigo").value = "";
     console.log(amigos);
 
+    //se muestra la lista actualizada y se limpia la sección de resultado
     displayedList();
+    displayedResult("");
 
     return;
 }
@@ -48,4 +50,12 @@ function randomName() {
 function displayedResult(textResult) {
     resultBox = document.getElementById("resultado");
     resultBox.innerHTML = textResult;
+}
+
+//se reinicia las cajas de información y el arreglo vuelve a estar vacío
+function restartDraw() {
+    document.getElementById("listaAmigos").innerHTML = "";
+    displayedResult("");
+    amigos = [];
+    return;
 }
