@@ -23,6 +23,7 @@ Por ultimo el boton "Reiniciar sorteo" cmo el nombre lo indica se reiniciara la 
 
 ## 🔑 Acceso al proyecto
 
+ 👉 [`Amigo secreto challenge`](https://bernal30.github.io/amigo-secreto-challenge/)
 
 ## ✔ Tecnologias utilizadas
 
