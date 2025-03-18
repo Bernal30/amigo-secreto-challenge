@@ -29,5 +29,15 @@ function displayedList() {
     //iteración sobre el arreglo para agregar nombres en cada iteración 
     for (let index = 0; index < amigos.length; index++) {
         displayedList.innerHTML += `<li class="item-list"> ${amigos[index]} </li>`;
-    }    
+    }
+    return; 
+}
+
+function randomName() {
+    if (amigos != []) {
+        let randomIndex = Math.floor(Math.random()*amigos.length);
+        console.log(randomIndex);
+    } else {
+        return alert("Ingrese almenos dos nombres a la lista para el sorteo.");
+    }
 }
