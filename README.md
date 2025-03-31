@@ -1,6 +1,8 @@
 <h1 align="center">Amigo secreto challenge Alura <img src="https://img.shields.io/badge/status-finished-blue"></h1>
 
-![Amigo secreto](assets/Screenshot%202025-03-17%20200447.png)
+<p align="center">
+    <img src="assets/Screenshot 2025-03-17 200447.png">
+</p>
 
 
 ## 📋 Descripción del proyecto
